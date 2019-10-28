@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Train Schedule</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  </head>
+
+  <body>
+    <!-- title -->
+    <div class="jumbotron">
+      <h1 style="text-align: center; font-weight: bold;">
+        Train Schedule
+      </h1>
+      <h3 style="text-align: center; font-weight: bold;">
+        We get you where you need to go...eventually.
+      </h3>
+    </div>
+
+    <div class="container">
+      <!-- table -->
+      <div class="card">
+        <div class="card-header">
+          Current Train Schedule
+        </div>
+        <div class="card-body">
+          <table id="displayTable" style="width:100%">
+            <tr>
+              <th id="trainName">Train Name</th>
+              <th id="trainDestination">Destination</th>
+              <th id="trainFrequency">Frequency(min)</th>
+              <th id="trainArrival">Next Arrival</th>
+              <th id="trainMinutesAway">Minutes Away</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- input form -->
+      <br />
+      <div class="card">
+        <div class="card-header">
+          Add Train
+        </div>
+        <div class="card-body">
+          <form>
+            <!-- name -->
+            <div class="form-group">
+              <label for="Name">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Name"
+              />
+            </div>
+            <!-- Destination -->
+            <div class="form-group">
+              <label for="Destination">Destination</label>
+              <input
+                type="text"
+                class="form-control"
+                id="destination"
+                placeholder="Destination"
+              />
+            </div>
+
+            <!-- Time -->
+            <div class="form-group">
+              <label for="Time">First Train Time (HH:mm - military time)</label>
+              <input
+                type="time"
+                class="form-control"
+                id="first-train"
+                placeholder="HH:mm"
+              />
+            </div>
+
+            <!-- Frequency -->
+            <div class="form-group">
+              <label for="Frequency">Frequency (min)</label>
+              <input
+                type="time"
+                class="form-control"
+                id="frequency"
+                placeholder="MM:ss"
+              />
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary" id="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <!-- jquery & javascript -->
+    <script
+      src="http://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-database.js"></script>
+  </body>
+</html>
