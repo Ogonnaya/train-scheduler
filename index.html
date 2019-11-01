@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Train Schedule</title>
 
+    <!-- JQuery -->
+    <script
+      src="http://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -16,6 +23,13 @@
 
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-database.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   </head>
 
   <body>
@@ -38,7 +52,7 @@
         <div class="card-body">
           <table id="displayTable" style="width:100%">
             <tr>
-              <th id="trainName">Train Name</th>
+              <th id="train">Train Name</th>
               <th id="trainDestination">Destination</th>
               <th id="trainFrequency">Frequency(min)</th>
               <th id="trainArrival">Next Arrival</th>
@@ -58,11 +72,11 @@
           <form>
             <!-- name -->
             <div class="form-group">
-              <label for="Name">Name</label>
+              <label for="Name">Train Name</label>
               <input
                 type="text"
                 class="form-control"
-                id="name"
+                id="train-name"
                 placeholder="Name"
               />
             </div>
@@ -81,22 +95,17 @@
             <div class="form-group">
               <label for="Time">First Train Time (HH:mm - military time)</label>
               <input
-                type="time"
+                type="text"
                 class="form-control"
                 id="first-train"
-                placeholder="HH:mm"
+                placeholder="hh:mm"
               />
             </div>
 
             <!-- Frequency -->
             <div class="form-group">
               <label for="Frequency">Frequency (min)</label>
-              <input
-                type="time"
-                class="form-control"
-                id="frequency"
-                placeholder="MM:ss"
-              />
+              <input type="text" class="form-control" id="frequency" />
             </div>
 
             <!-- Submit -->
@@ -109,16 +118,7 @@
       <br />
     </div>
 
-    <!-- jquery & javascript -->
-    <script
-      src="http://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+    <!-- Javascript -->
     <script type="text/javascript" src="./assets/javascript/app.js"></script>
-
-    <!-- Firebase References -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-database.js"></script>
   </body>
 </html>
